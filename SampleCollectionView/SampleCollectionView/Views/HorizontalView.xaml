@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SampleCollectionView.Views.HorizontalView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Title}"
+    mc:Ignorable="d">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="subTitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+
+            <Style x:Key="descriptionStackLayout" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Spacing" Value="2" />
+            </Style>
+
+            <Style x:Key="iconStyle" TargetType="Image">
+                <Setter Property="WidthRequest" Value="10" />
+                <Setter Property="HeightRequest" Value="10" />
+            </Style>
+
+            <Style x:Key="profileImageStyle" TargetType="Image">
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="Aspect" Value="AspectFill" />
+            </Style>
+
+            <Style x:Key="FrameCardViewStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="OutlineColor" Value="LightGray" />
+                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="itemsCardViewStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Spacing" Value="8" />
+            </Style>
+
+            <Style x:Key="itemsInsideCardViewStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Spacing" Value="8" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout Spacing="5">
+
+            <CollectionView x:Name="collectionViewListVertical" ItemsSource="{Binding Items}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="8">
+                            <Frame Style="{StaticResource FrameCardViewStyle}">
+                                <StackLayout Style="{StaticResource itemsCardViewStackLayoutStyle}">
+                                    <StackLayout Style="{StaticResource itemsInsideCardViewStackLayoutStyle}">
+                                        <circleImage:CircleImage Source="{Binding ProfileImage}" Style="{StaticResource profileImageStyle}" />
+                                        <StackLayout Style="{StaticResource descriptionStackLayout}">
+                                            <Label Style="{StaticResource TitleLabel}" Text="{Binding FullName}" />
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="phone.png" Style="{StaticResource iconStyle}" />
+                                                <Label Style="{StaticResource subTitleLabelStyle}" Text="{Binding Phone}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="email.png" Style="{StaticResource iconStyle}" />
+                                                <Label Style="{StaticResource subTitleLabelStyle}" Text="{Binding Email}" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="designation.png" Style="{StaticResource iconStyle}" />
+                                                <Label Style="{StaticResource subTitleLabelStyle}" Text="{Binding Designation}" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

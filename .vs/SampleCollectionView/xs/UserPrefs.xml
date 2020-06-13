@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{DEE336D2-8A41-4970-93EF-AB8FA1256510}|Default">
+  <MonoDevelop.Ide.ItemProperties.SampleCollectionView.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SampleCollectionView/SampleCollectionView/Views/VerticalRow.xaml">
+    <Files>
+      <File FileName="SampleCollectionView/SampleCollectionView/Views/VerticalRow.xaml" Line="93" Column="37" />
+      <File FileName="SampleCollectionView/SampleCollectionView/Views/VerticalRow.xaml.cs" Line="1" Column="1" />
+      <File FileName="SampleCollectionView/SampleCollectionView/Views/ItemDetailPage.xaml" Line="1" Column="1" />
+      <File FileName="SampleCollectionView/SampleCollectionView/ViewModels/ItemsViewModel.cs" Line="86" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SampleCollectionView" expanded="True">
+            <Node name="SampleCollectionView" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="VerticalRow.xaml" expanded="True" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SampleCollectionView.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53BC026E-B2EF-4EB8-BF9C-65FCF4BBA8D2" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
